@@ -8,8 +8,11 @@
 class Throttle {
 public:
     Throttle();
-    void attach(int pin, int mode);
+    Throttle(int pin);
+    Throttle(int pin, int mode);
+    Throttle(int pin, int mode, uint16_t interval_millis);
     void attach(int pin);
+    void attach(int pin, int mode);
     void interval(uint16_t interval_millis);
     bool update();
     bool fell();

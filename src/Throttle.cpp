@@ -9,6 +9,40 @@ Throttle::Throttle():
     previousPressedState(0),
     pin(0) {}
 
+    Throttle::Throttle(int pin):
+    previousDuration(0),
+    isRisen(false),
+    isFallen(false),
+    debounceTimeMillis(50),
+    lastChangedTime(0),
+    previousPressedState(0),
+    pin(pin) {
+        attach(pin);
+    }
+
+    Throttle::Throttle(int pin, int mode):
+    previousDuration(0),
+    isRisen(false),
+    isFallen(false),
+    debounceTimeMillis(50),
+    lastChangedTime(0),
+    previousPressedState(0),
+    pin(pin) {
+        attach(pin, mode);
+    }
+
+    Throttle::Throttle(int pin, int mode, uint16_t interval_millis):
+    previousDuration(0),
+    isRisen(false),
+    isFallen(false),
+    debounceTimeMillis(50),
+    lastChangedTime(0),
+    previousPressedState(0),
+    pin(pin) {
+        attach(pin, mode);
+        interval(interval_millis);
+    }
+
 void Throttle::attach(int pin) {
     this->pin = pin;
     previousPressedState = 0;
