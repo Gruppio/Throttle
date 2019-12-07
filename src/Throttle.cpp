@@ -4,7 +4,7 @@ Throttle::Throttle():
     previousDuration(0),
     isRisen(false),
     isFallen(false),
-    debounceTimeMillis(0),
+    debounceTimeMillis(50),
     lastChangedTime(0),
     previousPressedState(0),
     pin(0) {}
