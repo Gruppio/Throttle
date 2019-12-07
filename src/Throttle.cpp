@@ -55,9 +55,9 @@ bool Throttle::update() {
         return false;
 
       if(isPressedState) {
-          isFallen = true;
+          isRisen = true;
       } else {
-        isRisen = true;
+        isFallen = true;
       }
       
       previousDuration = currentTime - lastChangedTime;
