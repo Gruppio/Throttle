@@ -1,0 +1,16 @@
+{
+    "name": "Throttle",
+    "keywords": "throttle, debounce, bounce, signal, input, ouput, io, pin, fall, rise, edge",
+    "description": "Just like Debounce but faster",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Gruppio/Throttle.git"
+    },
+    "version": "1.0.0",
+    "exclude": [
+      "*.png",
+      "*.zip"
+    ],
+    "frameworks": "arduino",
+    "platforms": "*"
+  }

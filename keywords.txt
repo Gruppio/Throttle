@@ -1,0 +1,29 @@
+#######################################
+# Syntax Coloring Map For Throttle
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Throttle	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+attach	KEYWORD2
+interval	KEYWORD2
+update	KEYWORD2
+fell	KEYWORD2
+rose	KEYWORD2
+read	KEYWORD2
+duration	KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+#######################################
+# Constants (LITERAL1)
+#######################################
