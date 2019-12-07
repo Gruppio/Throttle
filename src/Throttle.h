@@ -26,18 +26,6 @@ protected:
     unsigned long lastChangedTime;
     uint8_t previousPressedState;
     uint8_t pin;
-
-    virtual bool readPressedState() { 
-        return digitalRead(pin); 
-    }
-
-    virtual void setPinMode(int pin, int mode) {
-#if defined(ARDUINO_STM_NUCLEO_F103RB) || defined(ARDUINO_GENERIC_STM32F103C)
-        pinMode(pin, (WiringPinMode)mode);
-#else
-        pinMode(pin, mode);
-#endif
-    }
-}
+};
 
 #endif

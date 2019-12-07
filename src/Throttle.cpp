@@ -39,7 +39,7 @@ bool Throttle::read() {
     return previousPressedState;
 }
 
-unsigned long duration() {
+unsigned long Throttle::duration() {
     return previousDuration;
 }
 
@@ -49,7 +49,7 @@ bool Throttle::update() {
     unsigned long currentTime = millis();
     if (currentTime - lastChangedTime > debounceTimeMillis)
     {
-      bool isPressedState = readPressedState();
+      bool isPressedState = digitalRead(pin);
 
       if (isPressedState == previousPressedState)
         return false;
