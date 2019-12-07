@@ -15,7 +15,7 @@ void Throttle::attach(int pin) {
 }
 
 void Throttle::attach(int pin, int mode) {
-    setPinMode(pin, mode);
+    pinMode(pin, mode);
     this->attach(pin);
 }
 
@@ -66,8 +66,4 @@ bool Throttle::update() {
       return true;
     } 
     return false;
-}
-
-unsigned long Bounce::duration() {
-	return (millis() - stateChangeLastTime);
 }
